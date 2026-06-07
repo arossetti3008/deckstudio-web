@@ -13,8 +13,8 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-inner">
         <a href="#inicio" className="navbar-logo">
-          {/* <img src="/deckstudio-icono-blanco.svg" alt="DeckStudio" className="navbar-logo-img" /> */}
-          <span className="navbar-logo-name">Deck<span>Studio</span></span>
+          <img src="/deckstudio-icono-nuevo.svg" alt="DeckStudio" className="navbar-logo-img" />
+          <span className="navbar-logo-name">deck<span>studio</span></span>
         </a>
         <ul className="navbar-links">
           <li><a href="#inicio">Inicio</a></li>

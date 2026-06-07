@@ -138,12 +138,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .navbar-logo-name {
   font-family: 'Outfit', sans-serif;
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--text-primary);
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--violet);
+  letter-spacing: -0.5px;
 }
 .navbar-logo-name span {
-  color: var(--violet-light);
+  font-weight: 400;
+  color: var(--blue);
 }
 .navbar-links {
   display: flex;
@@ -303,7 +305,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .hero-main-logo {
   width: 100%;
-  max-width: 600px;
+  max-width: 100% /*600px*/;
   height: auto;
   transform: scale(1.25);
   transform-origin: center;

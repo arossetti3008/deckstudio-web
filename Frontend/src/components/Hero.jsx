@@ -8,8 +8,8 @@ export default function Hero() {
         {/* ── Logo izquierda ── */}
         <div className="hero-logo-side fade-in-up delay-2">
           <div className="hero-logo-container">
-            <img style={{ opacity: 0.75 }} src="/deckstudio-icono-blanco.svg" alt="Logo DeckStudio" className="hero-main-logo" />
-            <img style={{marginLeft: '10px', filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.2))'}} src="/deckstudio-nombre.svg" alt="Logo DeckStudio" className="hero-main-logo" />
+            <img style={{ width: '160px', height: 'auto', opacity: 0.95 }} src="/deckstudio-icono-nuevo.svg" alt="Logo DeckStudio" className="hero-main-logo" />
+            <img style={{ width: '380px', height: 'auto', marginLeft: '15px', filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.2))'}} src="/deckstudio-nombre.svg" alt="Logo DeckStudio" className="hero-main-logo" />
           </div>
         </div>
 

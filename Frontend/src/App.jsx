@@ -1,17 +1,23 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Oportunidades from './components/Oportunidades'
 import Projects from './components/Projects'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 export default function App() {
   return (
-    <div className="app">
+    <div className="app" style={{ position: 'relative' }}>
+      {/* Fondo global con blobs difusos */}
+      <div className="global-bg">
+        <div className="bg-blob bg-blob-1" />
+        <div className="bg-blob bg-blob-2" />
+        <div className="bg-blob bg-blob-3" />
+      </div>
       <Navbar />
-      <main>
+      <main style={{ position: 'relative', zIndex: 1 }}>
         <Hero />
+        <Oportunidades />
         <Projects />
-        <Contact />
       </main>
       <Footer />
     </div>

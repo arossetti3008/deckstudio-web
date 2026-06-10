@@ -1,90 +1,53 @@
-import { useRef, useState, useEffect, useCallback } from 'react';
-
-// ─────────────────────────────────────────────────────────
-//  PROYECTOS — editá este array para agregar/quitar tarjetas
-//  driveEmbedUrl: el link de embed de Google Drive
-//  Ejemplo: https://drive.google.com/file/d/TU_FILE_ID/preview
-// ─────────────────────────────────────────────────────────
-
 const PROJECTS = [
   {
     id: 1,
-    tag: 'Gestión',
-    title: 'Sistema Odontológico',
-    desc: 'Plataforma completa de gestión para clínica dental: agenda, historial clínico, pacientes y facturación.',
-    features: ['Agenda digital', 'Gestión de pacientes', 'Historias clínicas', 'Presupuestos y recetas'],
-    mediaType: 'illustration',
-    imageUrl: '/icono_muela.png'
+    title: 'Gestión para Clínica Dental',
+    desc: 'Sistema integral para administrar turnos, historias clínicas, odontogramas y facturación de forma ágil.',
+    tag: 'Sistema de Gestión',
+    tech: ['React', 'Node.js', 'MongoDB', 'Express']
   },
   {
     id: 2,
-    tag: 'Stock & Producción',
-    title: 'Sistema de Producción Gastronómica',
-    desc: 'Software integral para el rubro gastronómico: trazabilidad de inventario, estandarización de recetas y órdenes de trabajo.',
-    features: ['Gestión de recetas', 'Control de stock', 'Gestión de pedidos'],
-    mediaType: 'illustration',
-    imageUrl: '/icono_receta.png'
+    title: 'Producción Gastronómica',
+    desc: 'Plataforma para control de inventarios de ingredientes, cálculo de costos de recetas y seguimiento de órdenes.',
+    tag: 'Plataforma Web',
+    tech: ['React', 'Vite', 'PostgreSQL', 'Sequelize']
   }
 ]
 
-function MediaPanel({ p, isHovered }) {
-  if (p.mediaType === 'illustration') {
-    return (
-      <div className="project-media-wrapper illustration-bg">
-        <img 
-          src={p.imageUrl} 
-          alt={p.title} 
-          className={`project-illustration ${isHovered ? 'hovered' : ''}`}
-        />
-      </div>
-    );
-  }
-  return null;
-}
-
-/* ───────────────────────────────────────────────────────── */
-/*  PROJECT CARD                                            */
-/* ───────────────────────────────────────────────────────── */
-function ProjectCardItem({ p }) {
-  const [isHovered, setIsHovered] = useState(false);
-
-  return (
-    <>
-      <div 
-        className="project-card"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <MediaPanel p={p} isHovered={isHovered} />
-        <div className="project-info">
-          <span className="project-tag">{p.tag}</span>
-          <h3 className="project-title">{p.title}</h3>
-          <p className="project-desc">{p.desc}</p>
-          {p.features && p.features.length > 0 && (
-            <div className="project-tech">
-              {p.features.map((f) => (
-                <span key={f} className="tech-chip">{f}</span>
-              ))}
-            </div>
-          )}
-        </div>
-      </div>
-    </>
-  )
-}
-
 export default function Projects() {
   return (
-    <section id="proyectos" className="projects">
+    <section id="proyectos" className="section">
       <div className="container">
-        <h2 className="section-title">Nuestros proyectos</h2>
-        <p className="section-subtitle">
-          Soluciones reales, en producción, usadas todos los días
-        </p>
+        <div className="section-header">
+          <h2 className="section-title">
+            Trabajos <span className="gradient-text">Realizados</span>
+          </h2>
+          <p className="section-subtitle">
+            Explorá algunos de los sistemas y plataformas web a medida que hemos desarrollado para solucionar problemas de negocio reales.
+          </p>
+        </div>
 
         <div className="projects-grid">
           {PROJECTS.map((p) => (
-            <ProjectCardItem key={p.id} p={p} />
+            <div key={p.id} className="project-card">
+              <div className="project-image-wrapper">
+                {/* Espacio reservado para el logo del proyecto */}
+                <div className="project-logo-placeholder">
+                  [ Logo ]
+                </div>
+              </div>
+              <div className="project-info">
+                <span className="project-tag">{p.tag}</span>
+                <h3 className="project-title">{p.title}</h3>
+                <p className="project-desc">{p.desc}</p>
+                <div className="project-tech">
+                  {p.tech.map((t, idx) => (
+                    <span key={idx} className="tech-tag">{t}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>

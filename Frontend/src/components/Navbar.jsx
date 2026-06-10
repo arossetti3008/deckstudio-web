@@ -1,27 +1,34 @@
 import { useState, useEffect } from 'react'
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 30)
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <div className="navbar-inner">
-        <a href="#inicio" className="navbar-logo">
-          <img src="/deckstudio-icono-nuevo.svg" alt="DeckStudio" className="navbar-logo-img" />
-          <span className="navbar-logo-name">deck<span>studio</span></span>
-        </a>
+    <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
+      <div className="container navbar-container">
         <ul className="navbar-links">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#inicio" className="navbar-link">Inicio</a></li>
+          <li><a href="#desarrollos" className="navbar-link">Desarrollos</a></li>
+          <li><a href="#proyectos" className="navbar-link">Proyectos</a></li>
         </ul>
-        <a href="#contacto" className="navbar-cta">Hablemos →</a>
+        <div>
+          <a href="#proyectos" className="btn btn-primary" style={{ padding: '8px 20px', fontSize: '0.85rem' }}>
+            Hablemos
+          </a>
+        </div>
       </div>
     </nav>
   )

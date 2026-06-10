@@ -1,54 +1,32 @@
 export default function Hero() {
   return (
     <section id="inicio" className="hero">
-      <div className="hero-bg" />
-      <div className="hero-overlay" />
-
-      <div className="hero-content">
-        {/* ── Logo izquierda ── */}
-        <div className="hero-logo-side fade-in-up delay-2">
-          <div className="hero-logo-container">
-            <img style={{ width: '160px', height: 'auto', opacity: 0.95 }} src="/deckstudio-icono-nuevo.svg" alt="Logo DeckStudio" className="hero-main-logo" />
-            <img style={{ width: '380px', height: 'auto', marginLeft: '15px', filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.2))'}} src="/deckstudio-nombre.svg" alt="Logo DeckStudio" className="hero-main-logo" />
-          </div>
+      <div className="container hero-content">
+        {/* Placeholder para el nuevo logo diseñado */}
+        <div className="hero-logo-container"> 
+          <img src="/public/logo-completo-color.svg" alt="[ LOGO ]" />
         </div>
 
-        {/* ── Texto derecha ── */}
-        <div>
-          <div className="hero-badge fade-in-up delay-3">
-            <span className="hero-badge-dot" />
-            Soluciones digitales a medida
-          </div>
+        <div className="hero-badge">
+          <span className="hero-badge-dot" />
+          Desarrollo de Software Exclusivo
+        </div>
 
-          <h1 className="hero-title fade-in-up delay-3">
-            Transformamos <span className="gradient-text">ideas</span> en<br />
-            software real
-          </h1>
+        <h1 className="hero-title">
+          Tu negocio merece su <span className="gradient-text">propio software</span>
+        </h1>
 
-          <p className="hero-desc fade-in-up delay-4">
-            Desarrollamos sistemas de gestión, aplicaciones web y automatizaciones 
-            pensadas para hacer crecer tu negocio. Rápido, robusto y a tu medida.
-          </p>
+        <p className="hero-subtitle">
+          Diseñamos y construimos sistemas de gestión, aplicaciones web y automatizaciones de procesos a la medida de tus necesidades de negocio.
+        </p>
 
-          <div className="hero-actions fade-in-up delay-4">
-            <a href="#proyectos" className="btn-primary">Ver proyectos ↓</a>
-            <a href="#contacto" className="btn-outline">Hablemos</a>
-          </div>
-
-          <div className="hero-stats fade-in-up delay-4">
-            <div>
-              <div className="hero-stat-value">100%</div>
-              <div className="hero-stat-label">Custom</div>
-            </div>
-            <div>
-              <div className="hero-stat-value">Full</div>
-              <div className="hero-stat-label">Stack</div>
-            </div>
-            <div>
-              <div className="hero-stat-value">ARG</div>
-              <div className="hero-stat-label">Based</div>
-            </div>
-          </div>
+        <div className="hero-buttons">
+          <a href="#proyectos" className="btn btn-primary">
+            Ver Proyectos
+          </a>
+          <a href="#desarrollos" className="btn btn-secondary">
+            Explorar Desarrollos
+          </a>
         </div>
       </div>
     </section>

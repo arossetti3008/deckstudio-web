@@ -1,17 +1,19 @@
 const PROJECTS = [
   {
     id: 1,
-    title: 'Gestión para Clínica Dental',
-    desc: 'Sistema integral para administrar turnos, historias clínicas, odontogramas y facturación de forma ágil.',
+    title: 'Desarrollo para Consultorios Clínicos',
+    desc: 'Sistema integral para administrar turnos, historias clínicas de pacientes, presupuestos y tratamientos de forma ágil.',
     tag: 'Sistema de Gestión',
-    tech: ['React', 'Node.js', 'MongoDB', 'Express']
+    img:"/LogoOdonto.jpg",
+    // tech: ['React', 'Node.js', 'MongoDB', 'Express']
   },
   {
     id: 2,
-    title: 'Producción Gastronómica',
+    title: 'Desarrollo para Producción Gastronómica',
     desc: 'Plataforma para control de inventarios de ingredientes, cálculo de costos de recetas y seguimiento de órdenes.',
-    tag: 'Plataforma Web',
-    tech: ['React', 'Vite', 'PostgreSQL', 'Sequelize']
+    tag: 'sistema de gestión',
+    img:"/LogoOdonto.jpg",
+    // tech: ['React', 'Vite', 'PostgreSQL', 'Sequelize']
   }
 ]
 
@@ -32,19 +34,22 @@ export default function Projects() {
           {PROJECTS.map((p) => (
             <div key={p.id} className="project-card">
               <div className="project-image-wrapper">
-                {/* Espacio reservado para el logo del proyecto */}
-                <div className="project-logo-placeholder">
-                  [ Logo ]
-                </div>
+                {p.img ? (
+                  <img src={p.img} alt={p.title} className="project-card-image" />
+                ) : (
+                  <div className="project-logo-placeholder">
+                    [ Logo ]
+                  </div>
+                )}
               </div>
               <div className="project-info">
                 <span className="project-tag">{p.tag}</span>
                 <h3 className="project-title">{p.title}</h3>
                 <p className="project-desc">{p.desc}</p>
                 <div className="project-tech">
-                  {p.tech.map((t, idx) => (
+                  {/* {p.tech.map((t, idx) => (
                     <span key={idx} className="tech-tag">{t}</span>
-                  ))}
+                  ))} */}
                 </div>
               </div>
             </div>

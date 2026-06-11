@@ -2,9 +2,9 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="footer-content">
+        {/* <div className="footer-content">
           <div className="footer-brand-wrapper">
-            {/* Placeholder para logo definitivo */}
+            
             <div className="footer-logo-placeholder">D</div>
             <span className="footer-brand">deck<span>studio</span></span>
           </div>
@@ -14,7 +14,7 @@ export default function Footer() {
             <a href="#desarrollos" className="footer-link">Desarrollos</a>
             <a href="#proyectos" className="footer-link">Proyectos</a>
           </div>
-        </div>
+        </div> */}
 
         <div className="footer-bottom">
           <p>© {new Date().getFullYear()} DeckStudio. Todos los derechos reservados.</p>

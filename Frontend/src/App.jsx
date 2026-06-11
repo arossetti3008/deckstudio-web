@@ -14,7 +14,7 @@ export default function App() {
         <div className="bg-blob bg-blob-3" />
       </div>
       <Navbar />
-      <main style={{ position: 'relative', zIndex: 1 }}>
+      <main style={{ position: 'relative' }}>
         <Hero />
         <Oportunidades />
         <Projects />

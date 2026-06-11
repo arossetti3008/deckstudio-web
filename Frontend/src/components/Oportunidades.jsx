@@ -49,6 +49,7 @@ export default function Oportunidades() {
     <section id="desarrollos" className="section">
       <div className="container">
         <div className="section-header">
+          <div className="section-badge">Soluciones</div>
           <h2 className="section-title">
             Oportunidades & <span className="gradient-text">Desarrollo a Medida</span>
           </h2>

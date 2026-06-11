@@ -19,13 +19,16 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container navbar-container">
+        <a href="#inicio" className="navbar-logo">
+          <img src="/logo-completo-color.svg" alt="DeckStudio" className="navbar-logo-img" />
+        </a>
         <ul className="navbar-links">
           <li><a href="#inicio" className="navbar-link">Inicio</a></li>
           <li><a href="#desarrollos" className="navbar-link">Desarrollos</a></li>
           <li><a href="#proyectos" className="navbar-link">Proyectos</a></li>
         </ul>
-        <div>
-          <a href="#proyectos" className="btn btn-primary" style={{ padding: '8px 20px', fontSize: '0.85rem' }}>
+        <div className="navbar-actions">
+          <a href="#proyectos" className="btn btn-primary navbar-btn">
             Hablemos
           </a>
         </div>

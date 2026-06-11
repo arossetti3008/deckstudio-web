@@ -4,16 +4,16 @@ const PROJECTS = [
     title: 'Desarrollo para Consultorios Clínicos',
     desc: 'Sistema integral para administrar turnos, historias clínicas de pacientes, presupuestos y tratamientos de forma ágil.',
     tag: 'Sistema de Gestión',
-    img:"/LogoOdonto.jpg",
-    // tech: ['React', 'Node.js', 'MongoDB', 'Express']
+    img: "/LogoOdonto.jpg",
+    tech: ['React', 'Node.js', 'MongoDB', 'Express']
   },
   {
     id: 2,
     title: 'Desarrollo para Producción Gastronómica',
     desc: 'Plataforma para control de inventarios de ingredientes, cálculo de costos de recetas y seguimiento de órdenes.',
-    tag: 'sistema de gestión',
-    img:"/LogoOdonto.jpg",
-    // tech: ['React', 'Vite', 'PostgreSQL', 'Sequelize']
+    tag: 'Sistema de Gestión',
+    img: "/LogoGastro.png",
+    tech: ['React', 'Vite', 'PostgreSQL', 'Sequelize']
   }
 ]
 
@@ -47,9 +47,9 @@ export default function Projects() {
                 <h3 className="project-title">{p.title}</h3>
                 <p className="project-desc">{p.desc}</p>
                 <div className="project-tech">
-                  {/* {p.tech.map((t, idx) => (
+                  {p.tech.map((t, idx) => (
                     <span key={idx} className="tech-tag">{t}</span>
-                  ))} */}
+                  ))}
                 </div>
               </div>
             </div>

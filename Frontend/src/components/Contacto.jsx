@@ -35,7 +35,7 @@ export default function Contacto() {
       return
     }
 
-    const endpoint = 'https://script.google.com/macros/s/AKfycbwNugqFPQQOsllM6WICwApCBNLSTU5f-C-eCzL9fVtjf5CSTKchGVJhaeHgBKZgWjyZ/exec'
+    const endpoint = 'https://script.google.com/macros/s/AKfycbyBGPkHOjfJJJrdZEkN91wmjCRIAgSguRA_HUuNhh72UP2y0zuI5cwa3mo805cozUpF/exec'
 
     setStatus('sending')
     setErrorMsg('')

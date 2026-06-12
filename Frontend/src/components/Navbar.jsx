@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,10 +17,12 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const closeMobileMenu = () => setIsMobileMenuOpen(false)
+
   return (
     <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container navbar-container">
-        <a href="#inicio" className="navbar-logo">
+        <a href="#inicio" className="navbar-logo navbar-logo-desktop">
           <img src="/logo-completo-color.svg" alt="DeckStudio" className="navbar-logo-img" />
         </a>
         <ul className="navbar-links">
@@ -32,6 +35,25 @@ export default function Navbar() {
             Hablemos
           </a>
         </div>
+
+        {/* Mobile Hamburger Button */}
+        <button
+          className={`navbar-hamburger ${isMobileMenuOpen ? 'active' : ''}`}
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Menú de navegación"
+        >
+          <span className="hamburger-line" />
+          <span className="hamburger-line" />
+          <span className="hamburger-line" />
+        </button>
+      </div>
+
+      {/* Mobile Menu Drawer */}
+      <div className={`mobile-menu ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
+        <a href="#inicio" className="mobile-menu-link" onClick={closeMobileMenu}>Inicio</a>
+        <a href="#desarrollos" className="mobile-menu-link" onClick={closeMobileMenu}>Desarrollos</a>
+        <a href="#proyectos" className="mobile-menu-link" onClick={closeMobileMenu}>Proyectos</a>
+        <a href="#proyectos" className="btn btn-primary mobile-menu-btn" onClick={closeMobileMenu}>Hablemos</a>
       </div>
     </nav>
   )

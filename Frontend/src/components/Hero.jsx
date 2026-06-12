@@ -4,6 +4,11 @@ export default function Hero() {
       <div className="container hero-container-grid">
         {/* Columna Izquierda: Información de la Marca */}
         <div className="hero-info-side">
+          {/* Logo visible solo en mobile, antes del título */}
+          <div className="hero-mobile-logo">
+            <img src="/logo-completo-color.svg" alt="DeckStudio" />
+          </div>
+
           <div className="hero-badge">
             <span className="hero-badge-dot" />
             Desarrollo de Software Boutique
@@ -27,8 +32,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Columna Derecha: Logo Grande */}
-        <div className="hero-visual-side">
+        {/* Columna Derecha: Logo Grande (solo desktop) */}
+        <div className="hero-visual-side hero-visual-desktop">
           <div className="hero-logo-float">
             <img src="/logo-completo-color.svg" alt="DeckStudio" className="hero-logo-img" />
           </div>

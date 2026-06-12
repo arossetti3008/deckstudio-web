@@ -81,7 +81,7 @@ export default function Contacto() {
             ¿Tenés un proyecto? <span className="gradient-text">Hablemos</span>
           </h2>
           <p className="section-subtitle">
-            Contanos tu idea y te respondemos en menos de 24hs. Sin compromiso.
+            Contanos tu idea y te respondemos a la brevedad!
           </p>
         </div>
 
@@ -145,7 +145,7 @@ export default function Contacto() {
                     type="tel"
                     name="telefono"
                     className="form-input"
-                    placeholder="+54 9 ..."
+                    placeholder="..."
                     value={form.telefono}
                     onChange={handleChange}
                     disabled={status === 'sending'}

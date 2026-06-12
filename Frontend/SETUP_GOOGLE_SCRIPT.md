@@ -22,51 +22,43 @@ Copiá y pegá **exactamente** este código en el editor de Apps Script:
 
 ```javascript
 // ─── CONFIGURACIÓN ──────────────────────────
-const NOTIFICATION_EMAIL = 'arossetti3008@gmail.com';
-const SHEET_NAME = 'Hoja 1'; // Nombre de la hoja (pestaña) en tu spreadsheet
+var NOTIFICATION_EMAIL = 'arossetti3008@gmail.com';
+var SHEET_NAME = 'Hoja 1'; // Nombre de la hoja (pestaña) en tu spreadsheet
 
 // ─── HANDLER POST ───────────────────────────
 function doPost(e) {
   try {
-    const data = JSON.parse(e.postData.contents);
-    const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET_NAME);
-    
+    var data = JSON.parse(e.postData.contents);
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET_NAME);
+    var timestamp = new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires' });
+
     // Agregar fila con timestamp
     sheet.appendRow([
-      new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires' }),
+      timestamp,
       data.nombre || '',
       data.email || '',
       data.telefono || '',
       data.empresa || '',
       data.mensaje || ''
     ]);
-    
+
     // Enviar email de notificación
-    const subject = `🚀 Nuevo contacto DeckStudio: ${data.nombre}`;
-    const body = `
-¡Nuevo mensaje desde el formulario de contacto!
+    var subject = 'Nuevo contacto DeckStudio: ' + data.nombre;
+    var body = 'Nuevo mensaje desde el formulario de contacto!\n\n'
+      + 'Nombre:    ' + data.nombre + '\n'
+      + 'Email:     ' + data.email + '\n'
+      + 'Telefono:  ' + (data.telefono || 'No especificado') + '\n'
+      + 'Empresa:   ' + (data.empresa || 'No especificada') + '\n\n'
+      + 'Mensaje:\n' + data.mensaje + '\n\n'
+      + 'Enviado desde: deckstudio.com.ar\n'
+      + 'Fecha: ' + timestamp;
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📋 Nombre:    ${data.nombre}
-📧 Email:     ${data.email}
-📱 Teléfono:  ${data.telefono || 'No especificado'}
-🏢 Empresa:   ${data.empresa || 'No especificada'}
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-💬 Mensaje:
-${data.mensaje}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Enviado desde: deckstudio.com.ar
-Fecha: ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires' })}
-    `.trim();
-    
     MailApp.sendEmail(NOTIFICATION_EMAIL, subject, body);
-    
+
     return ContentService
       .createTextOutput(JSON.stringify({ result: 'success' }))
       .setMimeType(ContentService.MimeType.JSON);
-      
+
   } catch (error) {
     return ContentService
       .createTextOutput(JSON.stringify({ result: 'error', error: error.toString() }))

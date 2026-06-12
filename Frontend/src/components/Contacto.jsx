@@ -35,12 +35,7 @@ export default function Contacto() {
       return
     }
 
-    const endpoint = import.meta.env.VITE_FORM_ENDPOINT
-    if (!endpoint) {
-      setStatus('error')
-      setErrorMsg('El formulario no está configurado aún. Intentá más tarde.')
-      return
-    }
+    const endpoint = 'https://script.google.com/macros/s/AKfycbwNugqFPQQOsllM6WICwApCBNLSTU5f-C-eCzL9fVtjf5CSTKchGVJhaeHgBKZgWjyZ/exec'
 
     setStatus('sending')
     setErrorMsg('')

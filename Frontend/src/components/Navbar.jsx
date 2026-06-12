@@ -29,9 +29,10 @@ export default function Navbar() {
           <li><a href="#inicio" className="navbar-link">Inicio</a></li>
           <li><a href="#desarrollos" className="navbar-link">Desarrollos</a></li>
           <li><a href="#proyectos" className="navbar-link">Proyectos</a></li>
+          <li><a href="#contacto" className="navbar-link">Contacto</a></li>
         </ul>
         <div className="navbar-actions">
-          <a href="#proyectos" className="btn btn-primary navbar-btn">
+          <a href="#contacto" className="btn btn-primary navbar-btn">
             Hablemos
           </a>
         </div>
@@ -53,7 +54,8 @@ export default function Navbar() {
         <a href="#inicio" className="mobile-menu-link" onClick={closeMobileMenu}>Inicio</a>
         <a href="#desarrollos" className="mobile-menu-link" onClick={closeMobileMenu}>Desarrollos</a>
         <a href="#proyectos" className="mobile-menu-link" onClick={closeMobileMenu}>Proyectos</a>
-        <a href="#proyectos" className="btn btn-primary mobile-menu-btn" onClick={closeMobileMenu}>Hablemos</a>
+        <a href="#contacto" className="mobile-menu-link" onClick={closeMobileMenu}>Contacto</a>
+        <a href="#contacto" className="btn btn-primary mobile-menu-btn" onClick={closeMobileMenu}>Hablemos</a>
       </div>
     </nav>
   )

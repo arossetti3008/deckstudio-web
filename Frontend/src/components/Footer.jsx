@@ -19,6 +19,7 @@ export default function Footer() {
             <li><a href="#inicio" className="footer-link">Inicio</a></li>
             <li><a href="#desarrollos" className="footer-link">Desarrollos</a></li>
             <li><a href="#proyectos" className="footer-link">Proyectos</a></li>
+            <li><a href="#contacto" className="footer-link">Contacto</a></li>
           </ul>
         </div>
 

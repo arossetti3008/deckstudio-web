@@ -6,8 +6,20 @@ export default function Hero() {
       <div className="container hero-container-grid">
         <div className="hero-info-side">
 
-
-
+          {/* Logo Mobile (ícono DS + wordmark, solo visible en tablet/mobile) */}
+          <div className="hero-mobile-logo">
+            <div className="hero-mobile-composite">
+              <div className="hero-mobile-icon-wrap">
+                <div className="ds-icon hero-mobile-icon">
+                  <div className="ds-bl"></div>
+                  <span className="ds-txt">DS</span>
+                  <div className="ds-br"></div>
+                  <div className="ds-shimmer"></div>
+                </div>
+              </div>
+              <img src="/deckstudio-wordmark-dark.svg" alt="DeckStudio" className="hero-mobile-wordmark" />
+            </div>
+          </div>
 
           <div className="hero-badge">
             <span className="hero-badge-dot" />

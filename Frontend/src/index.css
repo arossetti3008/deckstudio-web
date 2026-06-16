@@ -577,22 +577,62 @@ a {
   100% { opacity: 1; transform: translateY(0px); }
 }
 
-/* ─── HERO MOBILE LOGO (always visible) ─── */
+/* ─── HERO MOBILE LOGO (solo tablet/mobile ≤1024px) ─── */
 .hero-mobile-logo {
-  display: block;
-  margin-bottom: 28px;
+  display: none;   /* hidden by default, shown via media query */
+  margin-bottom: 32px;
 }
 
-.hero-mobile-logo img,
-.hero-mobile-logo video {
-  height: 52px;
+.hero-mobile-composite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* wrapper reserva espacio igual al icon 48px * scale(2) = 96px */
+.hero-mobile-icon-wrap {
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-mobile-icon {
+  transform: scale(2);
+  transform-origin: center;
+  filter: drop-shadow(0 12px 28px rgba(109, 40, 217, 0.22));
+}
+
+.hero-mobile-wordmark {
+  height: 30px;
   width: auto;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: textFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards;
+  filter: drop-shadow(0 6px 14px rgba(109, 40, 217, 0.1));
 }
 
-.hero-mobile-logo img,
-.hero-mobile-logo video,
-.hero-mobile-logo .ds-icon {
-  filter: drop-shadow(0 10px 25px rgba(33, 95, 154, 0.12));
+/* ─── NAVBAR MOBILE BRAND ────────────────── */
+.navbar-mobile-brand {
+  display: none;   /* hidden on desktop */
+  align-items: center;
+  align-self: stretch;
+  padding: 8px 0;
+}
+
+/* Ícono DS estático en navbar (sin bucle de animación) */
+.navbar-mobile-icon .ds-bl,
+.navbar-mobile-icon .ds-br,
+.navbar-mobile-icon .ds-txt {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.navbar-mobile-icon .ds-shimmer {
+  display: none !important;
 }
 
 
@@ -1091,7 +1131,7 @@ a {
     align-items: center;
   }
   
-  /* Show mobile logo, hide desktop visual */
+  /* Mostrar logo mobile, ocultar visual desktop */
   .hero-mobile-logo {
     display: block;
   }
@@ -1124,9 +1164,13 @@ a {
     display: none;
   }
   
-  /* Hide navbar logo on mobile */
+  /* Hide desktop logo, show mobile icon */
   .navbar-logo-desktop {
     display: none;
+  }
+
+  .navbar-mobile-brand {
+    display: flex;
   }
   
   /* Show hamburger button */

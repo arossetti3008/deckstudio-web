@@ -614,26 +614,9 @@ a {
   filter: drop-shadow(0 6px 14px rgba(109, 40, 217, 0.1));
 }
 
-/* ─── NAVBAR MOBILE BRAND ────────────────── */
-.navbar-mobile-brand {
-  display: none;   /* hidden on desktop */
-  align-items: center;
-  align-self: stretch;
-  padding: 8px 0;
-}
 
-/* Ícono DS estático en navbar (sin bucle de animación) */
-.navbar-mobile-icon .ds-bl,
-.navbar-mobile-icon .ds-br,
-.navbar-mobile-icon .ds-txt {
-  animation: none !important;
-  opacity: 1 !important;
-  transform: none !important;
-}
 
-.navbar-mobile-icon .ds-shimmer {
-  display: none !important;
-}
+
 
 
 
@@ -1162,15 +1145,6 @@ a {
   .navbar-links,
   .navbar-actions {
     display: none;
-  }
-  
-  /* Hide desktop logo, show mobile icon */
-  .navbar-logo-desktop {
-    display: none;
-  }
-
-  .navbar-mobile-brand {
-    display: flex;
   }
   
   /* Show hamburger button */

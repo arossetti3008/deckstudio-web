@@ -23,19 +23,9 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container navbar-container">
-        {/* Desktop: logo horizontal (aparece al hacer scroll) */}
-        <a href="#inicio" className="navbar-logo navbar-logo-desktop">
+        {/* Logo horizontal — aparece al hacer scroll (desktop y mobile) */}
+        <a href="#inicio" className="navbar-logo">
           <img src="/deckstudio-horizontal-light.svg" alt="DeckStudio" className="navbar-logo-img" />
-        </a>
-
-        {/* Mobile: ícono DS siempre visible */}
-        <a href="#inicio" className="navbar-mobile-brand">
-          <div className="ds-icon navbar-mobile-icon">
-            <div className="ds-bl"></div>
-            <span className="ds-txt">DS</span>
-            <div className="ds-br"></div>
-            <div className="ds-shimmer"></div>
-          </div>
         </a>
 
         <ul className="navbar-links">

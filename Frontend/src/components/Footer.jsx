@@ -1,3 +1,5 @@
+import './animacion.css'
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -5,7 +7,12 @@ export default function Footer() {
         {/* Columna 1: Brand Info */}
         <div className="footer-brand-column">
           <div className="footer-brand-wrapper">
-            <img src="/logo-completo-color.svg" alt="DeckStudio" className="footer-logo-img" />
+            <div className="ds-icon">
+              <div className="ds-bl"></div>
+              <span className="ds-txt">DS</span>
+              <div className="ds-br"></div>
+              <div className="ds-shimmer"></div>
+            </div>
           </div>
           <p className="footer-brand-desc">
             Creamos software boutique e identidades digitales robustas para potenciar y automatizar la gestión de tu negocio.

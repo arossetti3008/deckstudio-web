@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import './animacion.css'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -23,7 +24,7 @@ export default function Navbar() {
     <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container navbar-container">
         <a href="#inicio" className="navbar-logo navbar-logo-desktop">
-          <img src="/logo-completo-color.svg" alt="DeckStudio" className="navbar-logo-img" />
+          <img src="/deckstudio-horizontal-light.svg" alt="DeckStudio" className="navbar-logo-img" />
         </a>
         <ul className="navbar-links">
           <li><a href="#inicio" className="navbar-link">Inicio</a></li>

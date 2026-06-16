@@ -1,13 +1,13 @@
+import './animacion.css'
+
 export default function Hero() {
   return (
     <section id="inicio" className="hero">
       <div className="container hero-container-grid">
-        {/* Columna Izquierda: Información de la Marca */}
         <div className="hero-info-side">
-          {/* Logo visible solo en mobile, antes del título */}
-          <div className="hero-mobile-logo">
-            <img src="/logo-completo-color.svg" alt="DeckStudio" />
-          </div>
+
+
+
 
           <div className="hero-badge">
             <span className="hero-badge-dot" />
@@ -34,8 +34,16 @@ export default function Hero() {
 
         {/* Columna Derecha: Logo Grande (solo desktop) */}
         <div className="hero-visual-side hero-visual-desktop">
-          <div className="hero-logo-float">
-            <img src="/logo-completo-color.svg" alt="DeckStudio" className="hero-logo-img" />
+          <div className="hero-logo-composite">
+            <div className="hero-composite-icon-wrapper">
+              <div className="ds-icon hero-composite-icon">
+                <div className="ds-bl"></div>
+                <span className="ds-txt">DS</span>
+                <div className="ds-br"></div>
+                <div className="ds-shimmer"></div>
+              </div>
+            </div>
+            <img src="/deckstudio-wordmark-dark.svg" alt="DeckStudio" className="hero-composite-text" />
           </div>
         </div>
       </div>

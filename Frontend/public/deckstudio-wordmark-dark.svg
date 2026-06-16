@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 280 130" width="280" height="130">
+
+  <!-- DECK -->
+  <text
+    x="140.0" y="80"
+    font-family="Poppins, 'Arial Black', sans-serif"
+    font-weight="800" font-size="72"
+    fill="#8b5cf6"
+    text-anchor="middle">DECK</text>
+
+  <!-- STUDIO — cada letra posicionada individualmente -->
+  <text x="50.50" y="116" font-family="Poppins, Arial, sans-serif" font-weight="500" font-size="28" fill="#38bdf8" text-anchor="middle">S</text>
+  <text x="86.00" y="116" font-family="Poppins, Arial, sans-serif" font-weight="500" font-size="28" fill="#38bdf8" text-anchor="middle">T</text>
+  <text x="122.50" y="116" font-family="Poppins, Arial, sans-serif" font-weight="500" font-size="28" fill="#38bdf8" text-anchor="middle">U</text>
+  <text x="161.00" y="116" font-family="Poppins, Arial, sans-serif" font-weight="500" font-size="28" fill="#38bdf8" text-anchor="middle">D</text>
+  <text x="193.50" y="116" font-family="Poppins, Arial, sans-serif" font-weight="500" font-size="28" fill="#38bdf8" text-anchor="middle">I</text>
+  <text x="227.00" y="116" font-family="Poppins, Arial, sans-serif" font-weight="500" font-size="28" fill="#38bdf8" text-anchor="middle">O</text>
+
+</svg>

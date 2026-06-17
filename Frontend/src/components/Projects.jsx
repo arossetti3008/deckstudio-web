@@ -1,19 +1,27 @@
 const PROJECTS = [
   {
     id: 1,
-    title: 'Desarrollo para Consultorios Clínicos',
-    desc: 'Sistema integral para administrar turnos, historias clínicas de pacientes, presupuestos y tratamientos de forma ágil.',
+    title: 'Gestión para Consultorios Clínicos',
+    desc: 'Sistema integral diseñado para la administración de turnos, historias clínicas, odontogramas y obras sociales de forma ágil.',
     tag: 'Sistema de Gestión',
-    img: "/LogoOdonto.jpg",
-    tech: ['React', 'Node.js', 'MongoDB', 'Express']
+    img: "/LogoOdonto.png",
+    tech: ['React', 'Node.js', 'Express', 'MongoDB']
   },
   {
     id: 2,
-    title: 'Desarrollo para Producción Gastronómica',
-    desc: 'Plataforma para control de inventarios de ingredientes, cálculo de costos de recetas y seguimiento de órdenes.',
+    title: 'Producción Gastronómica y Recetas',
+    desc: 'Plataforma optimizada para el control de inventario de ingredientes, costeo dinámico de recetas, planificación de producción y seguimiento de pedidos.',
     tag: 'Sistema de Gestión',
     img: "/LogoGastro.png",
-    tech: ['React', 'Vite', 'PostgreSQL', 'Sequelize']
+    tech: ['React', 'Vite', 'Express', 'MongoDB']
+  },
+  {
+    id: 3,
+    title: 'Control de Stock y Multi-Depósitos',
+    desc: 'Solución multi-sucursal para la gestión de catálogo de productos, registro de movimientos de inventario (ingresos, egresos, transferencias) y trazabilidad completa de stock.',
+    tag: 'Sistema de Gestión',
+    img: "/LogoStock.png",
+    tech: ['React', 'Vite', 'Express', 'MongoDB']
   }
 ]
 

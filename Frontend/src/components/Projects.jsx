@@ -6,6 +6,7 @@ const PROJECTS = [
     tag: 'Sistema de Gestión',
     img: "/LogoOdonto.png",
     tech: ['React', 'Node.js', 'Express', 'MongoDB']
+    // demoUrl: 'https://clinica.deckstudio.com.ar?demo=true' // Descomentar al desplegar clínica
   },
   {
     id: 2,
@@ -13,7 +14,8 @@ const PROJECTS = [
     desc: 'Plataforma optimizada para el control de inventario de ingredientes, costeo dinámico de recetas, planificación de producción y seguimiento de pedidos.',
     tag: 'Sistema de Gestión',
     img: "/LogoGastro.png",
-    tech: ['React', 'Vite', 'Express', 'MongoDB']
+    tech: ['React', 'Vite', 'Express', 'MongoDB'],
+    demoUrl: 'https://recetasstock.deckstudio.com.ar?demo=true'
   },
   {
     id: 3,
@@ -21,7 +23,8 @@ const PROJECTS = [
     desc: 'Solución multi-sucursal para la gestión de catálogo de productos, registro de movimientos de inventario (ingresos, egresos, transferencias) y trazabilidad completa de stock.',
     tag: 'Sistema de Gestión',
     img: "/LogoStock.png",
-    tech: ['React', 'Vite', 'Express', 'MongoDB']
+    tech: ['React', 'Vite', 'Express', 'MongoDB'],
+    demoUrl: 'https://stockdeposito.deckstudio.com.ar?demo=true'
   }
 ]
 
@@ -59,6 +62,16 @@ export default function Projects() {
                     <span key={idx} className="tech-tag">{t}</span>
                   ))}
                 </div>
+                {p.demoUrl && (
+                  <a 
+                    href={p.demoUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="btn-demo-action"
+                  >
+                    Probar Demo Interactiva →
+                  </a>
+                )}
               </div>
             </div>
           ))}

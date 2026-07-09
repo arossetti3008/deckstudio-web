@@ -73,7 +73,7 @@ export default function Contacto() {
         <div className="section-header">
           <div className="section-badge">Contacto</div>
           <h2 className="section-title">
-            ¿Tenés un proyecto? <span className="gradient-text">Hablemos</span>
+            ¿Necesitás un proyecto para tu negocio? <span className="gradient-text">Hablemos</span>
           </h2>
           <p className="section-subtitle">
             Contanos tu idea y te respondemos a la brevedad!

@@ -58,11 +58,11 @@ export default function Projects() {
                 <h3 className="project-title">{p.title}</h3>
                 <p className="project-desc">{p.desc}</p>
                 <div className="project-tech">
-                  {p.tech.map((t, idx) => (
+                  {/* {p.tech.map((t, idx) => (
                     <span key={idx} className="tech-tag">{t}</span>
-                  ))}
+                  ))} */}
                 </div>
-                {p.demoUrl && (
+                {/* {p.demoUrl && (
                   <a 
                     href={p.demoUrl} 
                     target="_blank" 
@@ -71,7 +71,7 @@ export default function Projects() {
                   >
                     Probar Demo Interactiva →
                   </a>
-                )}
+                )} */}
               </div>
             </div>
           ))}
